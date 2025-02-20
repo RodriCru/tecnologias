@@ -1,3 +1,4 @@
+/*En este archivo se declara el dto usuario y se declaran sus atributos */
 package com.tecnologias.api.dtos;
 
 import lombok.AllArgsConstructor;

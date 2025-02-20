@@ -1,3 +1,6 @@
+/*Este archivo se declara una función que en caso de que no se pueda 
+ * encontrar un usuario, mande una excepción personalizada.
+ */
 package com.tecnologias.api.exceptions;
 
 import org.springframework.http.HttpStatus;

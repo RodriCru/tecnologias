@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserServices {
         user = userRepository.save(user);
 
         UserDTO nuevoUserDTO = new UserDTO();
-        // nuevoUserDTO.setId(user.getId());
+        nuevoUserDTO.setId(user.getId());
         nuevoUserDTO.setPassword(user.getPassword());
         nuevoUserDTO.setLastLogin(user.getLastLogin());
         nuevoUserDTO.setSuperuser(user.isSuperuser());
@@ -104,6 +104,7 @@ public class UserServiceImpl implements UserServices {
                 .orElseThrow(() -> new recursoNoEncontrado("El usuario con el id: " + id + " No existe"));
 
         UserDTO userDTO = new UserDTO();
+        userDTO.setId(user.getId());
         userDTO.setPassword(user.getPassword());
         userDTO.setLastLogin(user.getLastLogin());
         userDTO.setSuperuser(user.isSuperuser());
@@ -145,6 +146,7 @@ public class UserServiceImpl implements UserServices {
         return users.stream()
                 .map(user -> {
                     UserDTO userDTO = new UserDTO();
+                    userDTO.setId(user.getId());
                     userDTO.setPassword(user.getPassword());
                     userDTO.setLastLogin(user.getLastLogin());
                     userDTO.setSuperuser(user.isSuperuser());
@@ -226,40 +228,40 @@ public class UserServiceImpl implements UserServices {
 
         user = userRepository.save(user);
 
-        UserDTO nuevoUserDTO = new UserDTO();
-        // nuevoUserDTO.setId(user.getId());
-        nuevoUserDTO.setPassword(user.getPassword());
-        nuevoUserDTO.setLastLogin(user.getLastLogin());
-        nuevoUserDTO.setSuperuser(user.isSuperuser());
-        nuevoUserDTO.setFirstName(user.getFirstName());
-        nuevoUserDTO.setLastName(user.getLastName());
-        nuevoUserDTO.setActive(user.isActive());
-        nuevoUserDTO.setDateJoined(user.getDateJoined());
-        nuevoUserDTO.setCreatedAt(user.getCreatedAt());
-        nuevoUserDTO.setModifiedAt(user.getModifiedAt());
-        nuevoUserDTO.setDeleted(user.isDeleted());
-        nuevoUserDTO.setDeletedAt(user.getDeletedAt());
-        nuevoUserDTO.setUsername(user.getUsername());
-        nuevoUserDTO.setEmail(user.getEmail());
-        nuevoUserDTO.setProfilePicture(user.getProfilePicture());
-        nuevoUserDTO.setEmailVerified(user.isEmailVerified());
-        nuevoUserDTO.setEmailVerifiedAt(user.getEmailVerifiedAt());
-        nuevoUserDTO.setNationality(user.getNationality());
-        nuevoUserDTO.setOccupation(user.getOccupation());
-        nuevoUserDTO.setDateOfBirth(user.getDateOfBirth());
-        nuevoUserDTO.setContactPhoneNumber(user.getContactPhoneNumber());
-        nuevoUserDTO.setGender(user.getGender());
-        nuevoUserDTO.setAddress(user.getAddress());
-        nuevoUserDTO.setAddressNumber(user.getAddressNumber());
-        nuevoUserDTO.setAddressInteriorNumber(user.getAddressInteriorNumber());
-        nuevoUserDTO.setAddressComplement(user.getAddressComplement());
-        nuevoUserDTO.setAddressNeighborhood(user.getAddressNeighborhood());
-        nuevoUserDTO.setAddressZipCode(user.getAddressZipCode());
-        nuevoUserDTO.setAddressCity(user.getAddressCity());
-        nuevoUserDTO.setAddressState(user.getAddressState());
-        nuevoUserDTO.setRole(user.getRole());
+        UserDTO actualizaUserDTO = new UserDTO();
+        actualizaUserDTO.setId(user.getId());
+        actualizaUserDTO.setPassword(user.getPassword());
+        actualizaUserDTO.setLastLogin(user.getLastLogin());
+        actualizaUserDTO.setSuperuser(user.isSuperuser());
+        actualizaUserDTO.setFirstName(user.getFirstName());
+        actualizaUserDTO.setLastName(user.getLastName());
+        actualizaUserDTO.setActive(user.isActive());
+        actualizaUserDTO.setDateJoined(user.getDateJoined());
+        actualizaUserDTO.setCreatedAt(user.getCreatedAt());
+        actualizaUserDTO.setModifiedAt(user.getModifiedAt());
+        actualizaUserDTO.setDeleted(user.isDeleted());
+        actualizaUserDTO.setDeletedAt(user.getDeletedAt());
+        actualizaUserDTO.setUsername(user.getUsername());
+        actualizaUserDTO.setEmail(user.getEmail());
+        actualizaUserDTO.setProfilePicture(user.getProfilePicture());
+        actualizaUserDTO.setEmailVerified(user.isEmailVerified());
+        actualizaUserDTO.setEmailVerifiedAt(user.getEmailVerifiedAt());
+        actualizaUserDTO.setNationality(user.getNationality());
+        actualizaUserDTO.setOccupation(user.getOccupation());
+        actualizaUserDTO.setDateOfBirth(user.getDateOfBirth());
+        actualizaUserDTO.setContactPhoneNumber(user.getContactPhoneNumber());
+        actualizaUserDTO.setGender(user.getGender());
+        actualizaUserDTO.setAddress(user.getAddress());
+        actualizaUserDTO.setAddressNumber(user.getAddressNumber());
+        actualizaUserDTO.setAddressInteriorNumber(user.getAddressInteriorNumber());
+        actualizaUserDTO.setAddressComplement(user.getAddressComplement());
+        actualizaUserDTO.setAddressNeighborhood(user.getAddressNeighborhood());
+        actualizaUserDTO.setAddressZipCode(user.getAddressZipCode());
+        actualizaUserDTO.setAddressCity(user.getAddressCity());
+        actualizaUserDTO.setAddressState(user.getAddressState());
+        actualizaUserDTO.setRole(user.getRole());
 
-        return nuevoUserDTO;
+        return actualizaUserDTO;
     }
 
     @Override

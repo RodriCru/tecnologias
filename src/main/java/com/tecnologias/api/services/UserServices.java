@@ -1,3 +1,4 @@
+/*Aqui se crean la interfaz de los métodos (endpoints) que implementaremos */
 package com.tecnologias.api.services;
 
 import com.tecnologias.api.dtos.UserDTO;

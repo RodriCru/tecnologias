@@ -1,3 +1,6 @@
+/*En este documento se declara el módelo de users, este se basa en el módelo de
+ * la base de datos, es el que estara encargado de hacer las sentencias sql
+ */
 package com.tecnologias.api.models;
 
 import java.time.LocalDate;
@@ -118,92 +121,4 @@ public class User {
         }
     }
     
-    /*public long getId(){
-
-        return id;
-    }
-
-    public void setId(Long id){
-        this.id = id;
-    }
-
-    public String getPassword(){
-        return password;
-    }
-
-    public void setPassword(String password){
-        this.password = password;
-    }
-
-    public boolean getSuperuser(){
-        return superuser;
-    }
-
-    public void setSuperuser(boolean superuser){
-        this.superuser = superuser;
-    }
-
-    public String getFirstName(){
-        return firstName;
-    }
-
-    public void setFirstName(String firstName){
-        this.firstName = firstName;
-    }
-
-    public String getLastName(){
-        return lastName;
-    }
-
-    public void setLastName(String lastname){
-        this.lastName = lastname;
-    }
-
-    public boolean getActive(){
-        return active;
-    }
-
-    public void setActive(boolean active){
-        this.active = active;
-    }
-
-    public String getDateJoined(){
-        return joined;
-    }
-
-    public void setJoined(String DataJoined){
-        this.joined = joined;
-    }
-
-    public String getModified(){
-        return modified;
-    }
-
-    public void setModified(String modified){
-        this.modified = modified;
-    }
-
-    public boolean getDeleted(){
-        return deleted;
-    }
-
-    public void setDeleted(boolean deleted){
-        this.deleted = deleted;
-    }
-
-    public String getUsername(){
-        return username;
-    }
-
-    public void setUsername(String username){
-        this.username=username;
-    }
-
-    public String getEmailVerified(){
-        return emailVerified;
-    }
-
-    public void setEmailVerified(String emailVerified){
-        this.emailVerified = emailVerified;
-    }*/
 }
